@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rehearsal Room · Three Ways to Participate</title>
+<meta name="description" content="A minimal research demo comparing authored branches, story variables, and user-controlled expression.">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main>
+<header>
+<div class="topline"><div class="eyebrow">Rehearsal Room · Yixiao Wang</div><button class="plain" id="reset">Reset all</button></div>
+<h1>One scene.<br>Three ways to participate.</h1>
+<p class="subtitle">From choosing a story path to shaping your own words—and deciding what the system may remember.</p>
+<p id="runtime-status" role="status">Loading interactive controls…</p>
+<noscript><p class="error">JavaScript is disabled in this viewer. Open this website in a regular browser with JavaScript enabled.</p></noscript>
+</header>
+<nav class="tabs" role="tablist" aria-label="Interaction model">
+<button class="tab netflix" id="tab-netflix" role="tab" aria-selected="true" aria-controls="interaction" data-mode="netflix"><span>01</span>Netflix-style</button>
+<button class="tab bili" id="tab-bili" role="tab" aria-selected="false" aria-controls="interaction" data-mode="bili" tabindex="-1"><span>02</span>Bilibili-style</button>
+<button class="tab" id="tab-proposal" role="tab" aria-selected="false" aria-controls="interaction" data-mode="proposal" tabindex="-1"><span>03</span>Proposed drama</button>
+</nav>
+<div class="layout">
+<aside>
+<div class="story" id="story"></div>
+<div class="explain" id="explanation"></div>
+</aside>
+<section class="panel" id="interaction" role="tabpanel" aria-labelledby="tab-netflix" tabindex="-1"></section>
+</div>
+<section class="compare" aria-label="Comparison summary">
+<div><h3>Netflix-style · authored paths</h3><p>Choose among authored actions. Earlier choices can affect later scenes. This example is inspired by historical <em>Bandersnatch</em> mechanics.</p></div>
+<div><h3>Bilibili-style · paths + variables</h3><p>Creator-defined values can gate later options or endings. This example uses an invented “trust” rule—not a platform default.</p></div>
+<div><h3>Proposed · editable expression</h3><p>Revise a line, receive a bounded response, and confirm or reject a preference inference. Personalization is not automatic personality diagnosis.</p></div>
+</section>
+<p class="key">The research difference is not “more branches.” It is user control over expression and preference evidence.</p>
+<footer class="footer">
+<p><strong>Mechanism sketch, not a platform replica.</strong> Original fictional scenes. All responses and suggestions are scripted; no live AI, video playback, or measured superiority. Netflix and Bilibili both support in-story state. This demo simplifies their mechanisms.</p>
+<p><strong>Your input stays in this tab.</strong> This application does not upload or persist your typed lines or preferences, and has no analytics. Reloading or “Reset all” clears demo memory. Website delivery uses normal hosting requests; source links leave this page.</p>
+<details><summary>Sources &amp; a 90-second presentation route</summary>
+<p style="margin-top:12px">1. Try a Netflix-style choice. 2. Compare “Trust” and “Challenge” in Bilibili-style to see the variable gate. 3. In Proposed drama, edit a suggestion, send it, correct the preference card, and choose whether to carry it into the next scene. Replay freely—these are demonstrations, not study conditions.</p>
+<ol class="refs">
+<li><a href="https://www.hollywoodreporter.com/tv/tv-news/black-mirror-bandersnatch-netflixs-interactive-film-explained-1171486/" target="_blank" rel="noopener noreferrer">The Hollywood Reporter: Bandersnatch’s choices, ten-second default, and state tracking (2018)</a></li>
+<li><a href="https://www.bilibili.com/blackboard/interactive-video-introduction.html" target="_blank" rel="noopener noreferrer">Bilibili: official interactive-video introduction</a></li>
+<li><a href="https://m.bilibili.com/opus/722306975590776840" target="_blank" rel="noopener noreferrer">Bilibili creator tutorial: variables and cross-node conditions (2022)</a></li>
+<li><a href="https://arxiv.org/html/2502.17878v1" target="_blank" rel="noopener noreferrer">Existing LLM interactive-drama research (2025)</a>: open dialogue itself is not a new contribution.</li>
+</ol>
+<p>Historical mechanism references do not guarantee that the original titles remain playable today. The proposed design and its benefits still require evaluation.</p>
+</details>
+</footer>
+</main>
+<script src="./app.js" defer></script>
+</body>
+</html>
